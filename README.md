@@ -3,7 +3,6 @@
 
 This project consists of the analysis and design of a web application for Halcon, a construction material distributor. The objective of the system is to automate internal processes and allow customers to track the status of their orders in real time.
 
----
 
 ## Problem Description
 
@@ -16,7 +15,6 @@ Halcon currently manages its order lifecycle manually, which creates inefficienc
 
 The proposed solution is a web-based system that digitalizes the complete order workflow.
 
----
 
 ## System Objectives
 
@@ -27,7 +25,6 @@ The proposed solution is a web-based system that digitalizes the complete order 
 - Implement logical deletion of orders.
 - Provide search filters by invoice, customer number, date, and status.
 
----
 
 ## System Roles
 
@@ -40,7 +37,6 @@ The system includes the following roles:
 - **Route** – Delivers orders and uploads delivery evidence.
 - **Customer** – Checks order status (no registration allowed).
 
----
 
 ## Order Lifecycle
 
@@ -51,7 +47,6 @@ The system includes the following roles:
 
 Each status represents a stage in the order fulfillment process.
 
----
 
 ## Diagrams Included
 
@@ -63,11 +58,7 @@ The following diagrams were created for system modeling:
 - Activity Diagram
 - ER Diagram (Database Model)
 
-All diagrams are located inside the `/docs/diagrams` folder.
-
----
-
-## 🛠 Work Methodology
+## Work Methodology
 
 The project follows the **Agile – Scrum** methodology.
 
@@ -88,7 +79,6 @@ The project follows the **Agile – Scrum** methodology.
 | 4 | Photo Upload |
 | 5 | Testing & Deployment |
 
----
 
 ## Database Selection
 
@@ -99,7 +89,6 @@ The project follows the **Agile – Scrum** methodology.
 - It supports relational constraints.
 - It is scalable and open-source.
 
----
 
 ## Security Considerations
 
