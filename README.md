@@ -97,4 +97,3 @@ The project follows the **Agile – Scrum** methodology.
 - Logical deletion instead of physical deletion.
 - Photo upload restricted to Route department.
 
----
