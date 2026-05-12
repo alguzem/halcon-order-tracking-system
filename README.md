@@ -147,18 +147,6 @@ The system displays visual notifications when:
 
 ---
 
-# Diagrams Included
-
-The following diagrams were created during the analysis and design phase:
-
-- BPMN Diagram
-- Use Case Diagram
-- Class Diagram
-- Activity Diagram
-- ER Diagram
-
----
-
 # Work Methodology
 
 The project follows the **Agile - Scrum** methodology.
