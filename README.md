@@ -1,59 +1,219 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# HALCON ORDER TRACKING SYSTEM
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Overview
 
-## About Laravel
+This project consists of the analysis, design, and development of a web application for **Halcon**, a construction material distributor company. The purpose of the system is to automate internal processes and allow customers to track the status of their orders in real time.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application was developed using **Laravel 11**, **Blade**, **Bootstrap 5**, and **PostgreSQL/MySQL** following best programming practices and role-based security.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Problem Description
 
-## Learning Laravel
+Halcon currently manages its order lifecycle manually, generating inefficiencies in:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Order tracking
+- Communication between departments
+- Delivery evidence management
+- Customer service
+- Inventory coordination
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The proposed solution digitalizes the complete order workflow and centralizes all operations into a single platform.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# System Objectives
 
-### Premium Partners
+- Automate the order lifecycle.
+- Implement role-based access control.
+- Allow customers to check order status using customer number and invoice number.
+- Store delivery evidence through uploaded photos.
+- Implement logical deletion of orders.
+- Provide search filters by invoice, customer number, date, and status.
+- Improve communication between departments.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+# System Roles
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+The system includes the following roles:
 
-## Code of Conduct
+| Role | Description |
+|------|-------------|
+| Administrator | Creates users and assigns roles |
+| Sales | Registers customer orders |
+| Warehouse | Prepares materials and updates order status |
+| Purchasing | Manages material acquisition |
+| Route | Delivers orders and uploads delivery evidence |
+| Customer | Checks order status without registration |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+# Order Lifecycle
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The application manages the following order statuses:
 
-## License
+1. **Ordered**
+2. **In Process**
+3. **In Route**
+4. **Delivered**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Each status represents a stage in the order fulfillment process.
+
+---
+
+# Main Features
+
+## Customer Features
+
+- Track orders using:
+  - Customer number
+  - Invoice number
+- View current order status
+- View delivery evidence photo when order is delivered
+
+---
+
+## Employee Features
+
+- Secure login system
+- Administrative dashboard
+- User management
+- Order management
+- Edit orders
+- Logical deletion of orders
+- Restore archived orders
+- Search orders by:
+  - Invoice number
+  - Customer number
+  - Date
+  - Status
+
+---
+
+# User Interface
+
+The application interface was developed using **Blade templates** and **Bootstrap 5**.
+
+The system includes:
+
+- Modern welcome page
+- Professional login view
+- Responsive dashboard
+- Orders management section
+- Archived orders section
+- Responsive tables and forms
+- Status badges
+- Sidebar navigation
+- Attractive visual design
+
+---
+
+# User Experience Features
+
+The application includes several features to improve user experience:
+
+- SweetAlert2 notifications
+- Confirmation messages
+- Responsive design
+- Easy navigation
+- Color-coded statuses
+- Modern dashboard interface
+- Custom permission error page
+
+---
+
+# Alerts and Notifications
+
+The system displays visual notifications when:
+
+- An order is created
+- An order is updated
+- An order is archived
+- An archived order is restored
+
+---
+
+# Security Features
+
+- Authentication system
+- Role-based authorization
+- Middleware route protection
+- Customers cannot register
+- Restricted views by role
+- Custom access denied page
+- Logical deletion instead of physical deletion
+- Photo upload restricted to Route department
+
+---
+
+# Diagrams Included
+
+The following diagrams were created during the analysis and design phase:
+
+- BPMN Diagram
+- Use Case Diagram
+- Class Diagram
+- Activity Diagram
+- ER Diagram
+
+---
+
+# Work Methodology
+
+The project follows the **Agile - Scrum** methodology.
+
+## Why Scrum?
+
+- The system involves multiple departments.
+- Requirements may evolve over time.
+- Development can be divided into incremental sprints.
+- Continuous validation reduces development risks.
+
+---
+
+# Proposed Sprint Plan
+
+| Sprint | Deliverable |
+|--------|-------------|
+| Sprint 1 | Authentication & Roles |
+| Sprint 2 | Order Lifecycle |
+| Sprint 3 | Dashboard & Search |
+| Sprint 4 | Photo Upload |
+| Sprint 5 | Testing & Deployment |
+
+---
+
+# Database Selection
+
+PostgreSQL/MySQL was selected because:
+
+- It is ACID compliant
+- It guarantees data integrity
+- It supports relational constraints
+- It is scalable
+- It is open-source
+
+---
+
+# Technologies Used
+
+- Laravel 11
+- PHP 8
+- Blade
+- Bootstrap 5
+- PostgreSQL / MySQL
+- SweetAlert2
+- HTML5
+- CSS3
+- JavaScript
+- Git & GitHub
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/alguzem/halcon-order-tracking-system.git
